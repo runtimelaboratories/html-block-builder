@@ -300,23 +300,22 @@ function downloadFile(filename, content) {
   a.click();
 }
 
-// Wait for the editor to be fully loaded
 editor.on('load', () => {
-  // Find the "options" panel (top-right buttons)
-  const panel = editor.Panels.getPanel('options');
-
-  if (panel) {
-    // Insert a logo at the start
-    const logoEl = document.createElement('div');
-    logoEl.className = 'gjs-logo';
-    logoEl.innerHTML = `<img src="${logo}" alt="Logo" />`;
-
-    panel.get('buttons').add({
-      id: 'logo-placeholder', // dummy id
-      el: logoEl
-    });
-
-    // Or simply prepend to panel's element
-    panel.get('el').prepend(logoEl);
-  }
+  // Add a panel at the top
+  editor.Panels.addPanel({
+    id: 'header-panel',
+    el: '', // let GrapesJS create it
+    visible: true,
+    buttons: [
+      {
+        id: 'logo-btn',
+        className: 'gjs-logo-btn',
+        command: '', // no command
+        attributes: { title: 'Logo' },
+        label: `<a href="https://marcus-tipler.me/">
+                  <img src="${logo}" alt="Logo" />
+                </a>`
+      }
+    ]
+  });
 });

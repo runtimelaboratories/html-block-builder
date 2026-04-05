@@ -1,15 +1,15 @@
 .gjs-logo {
-  display: flex;         /* inline-flex works too */
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  height: 40px;          /* match panel height */
-  width: auto;           /* keep natural width */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-right: 10px !important;
 }
 
 .gjs-logo img {
-  height: 30px;          /* fit nicely inside the panel */
-  width: auto;
+  height: 20px !important;
+  width: auto !important;
+  display: inline-block !important;
+  max-height: 20px !important;
 }
 
 .gjs-logo-panel {
@@ -20,7 +20,13 @@
 }
 
 .gjs-logo-panel img {
-  height: 30px;
+  height: 20px;
+}
+
+.gjs-logo-btn img {
+  height: 23px;
+  width: auto;
+  display: block;
 }
 
 /* Main editor background */
