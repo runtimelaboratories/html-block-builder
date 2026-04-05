@@ -8,6 +8,8 @@ import tabs from 'grapesjs-tabs';
 import tooltip from 'grapesjs-tooltip';
 import exportPlugin from 'grapesjs-plugin-export';
 
+import logo from './src/logo.png';
+
 const editor = grapesjs.init({
   container: '#gjs',
   height: '100vh',
@@ -297,3 +299,24 @@ function downloadFile(filename, content) {
   a.download = filename;
   a.click();
 }
+
+// Wait for the editor to be fully loaded
+editor.on('load', () => {
+  // Find the "options" panel (top-right buttons)
+  const panel = editor.Panels.getPanel('options');
+
+  if (panel) {
+    // Insert a logo at the start
+    const logoEl = document.createElement('div');
+    logoEl.className = 'gjs-logo';
+    logoEl.innerHTML = `<img src="${logo}" alt="Logo" />`;
+
+    panel.get('buttons').add({
+      id: 'logo-placeholder', // dummy id
+      el: logoEl
+    });
+
+    // Or simply prepend to panel's element
+    panel.get('el').prepend(logoEl);
+  }
+});

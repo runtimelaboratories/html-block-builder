@@ -1,0 +1,48 @@
+.gjs-logo {
+  display: flex;         /* inline-flex works too */
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  height: 40px;          /* match panel height */
+  width: auto;           /* keep natural width */
+}
+
+.gjs-logo img {
+  height: 30px;          /* fit nicely inside the panel */
+  width: auto;
+}
+
+.gjs-logo-panel {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #333;
+}
+
+.gjs-logo-panel img {
+  height: 30px;
+}
+
+/* Main editor background */
+.gjs-one-bg {
+  background-color: #1e1e1e !important;
+}
+
+/* Secondary panels */
+.gjs-two-color {
+  color: #e0e0e0 !important;
+}
+
+/* Buttons & accents */
+.gjs-three-bg {
+  background-color: #333 !important;
+}
+
+.gjs-four-color {
+  color: #4dabf7 !important;
+}
+
+/* Canvas background */
+.gjs-cv-canvas {
+  background-color: #121212;
+}
