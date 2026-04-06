@@ -1,4 +1,4 @@
-# Drag & Drop UI Builder ⭐
+# Drag & Drop UI Builder
 
 [![Stars|128](https://img.shields.io/github/stars/runtimelaboratories/html-block-builder.svg)](https://github.com/runtimelaboratories/html-block-builder/stargazers)
 [![License](https://img.shields.io/github/license/runtimelaboratories/html-block-builder.svg)](LICENSE)
