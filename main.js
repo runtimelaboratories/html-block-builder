@@ -101,7 +101,7 @@ const editor = grapesjs.init({
 
   components: `
     <h1>Hello World 👋</h1>
-    <p>This is your first GrapesJS page.</p>
+    <p>This is your first Prototype page.</p>
   `,
 
   style: `
