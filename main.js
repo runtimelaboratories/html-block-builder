@@ -262,6 +262,19 @@ editor.Panels.addButton('options', {
   attributes: { title: 'Load Project' }
 });
 
+// Add a "Clear Cache" button to your header panel
+editor.Panels.addButton('options', {
+  id: 'clear-cache',
+  className: 'fa fa-trash',
+  attributes: { title: 'Clear Editor Cache' },
+  command: () => {
+    if (confirm('Are you sure you want to clear the editor cache?')) {
+      localStorage.clear();
+      window.location.reload();
+    }
+  }
+});
+
 editor.Commands.add('save-project', {
   run(editor) {
     const data = editor.getProjectData();
